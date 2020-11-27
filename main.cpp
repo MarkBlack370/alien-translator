@@ -13,7 +13,7 @@ unsigned int key=0;
 string EN(string en,unsigned int k);
 string DE(string de,unsigned int k);
 
-char dec2hexChar(short int n)               //×ªURL
+char dec2hexChar(short int n)
 {
     if ( 0 <= n && n <= 9 )
     {
@@ -103,21 +103,21 @@ int main()
 {
 	void fun1();
 	void fun2();
-	cout<<"*»¶Ó­Ê¹ÓÃ¹³Âë·­ÒëÆ÷Gamma°æ :)*\n";
-	cout<<"\nÇëÊäÈëÃÜÔ¿£¨·Ç¸ºÕûÊý£©£º";
+	cout<<"*æ¬¢è¿Žä½¿ç”¨é’©ç ç¿»è¯‘å™¨Gammaç‰ˆ :)*\n";
+	cout<<"\nè¯·è¾“å…¥å¯†é’¥ï¼ˆéžè´Ÿæ•´æ•°ï¼‰ï¼š";
 	if(scanf("%u",&key)==0)
     {
-        cout<<"\nÊäÈëÓÐÎó:(\n";
+        cout<<"\nè¾“å…¥æœ‰è¯¯:(\n";
         system("pause");
         exit(1);
     }
 	int num;
 	while(1)
 	{
-		cout<<"\nÊäÈëÃ÷ÎÄÇë°´¡¾1¡¿£¬·­ÒëÃÜÎÄÇë°´¡¾2¡¿,¸ü»»ÃÜÔ¿Çë°´¡¾3¡¿£¬ÍË³ö³ÌÐòÇë°´¡¾4¡¿¡£\nÇëÊäÈëÑ¡Ïî£º";
+		cout<<"\nè¾“å…¥æ˜Žæ–‡è¯·æŒ‰ã€1ã€‘ï¼Œç¿»è¯‘å¯†æ–‡è¯·æŒ‰ã€2ã€‘,æ›´æ¢å¯†é’¥è¯·æŒ‰ã€3ã€‘ï¼Œé€€å‡ºç¨‹åºè¯·æŒ‰ã€4ã€‘ã€‚\nè¯·è¾“å…¥é€‰é¡¹ï¼š";
 		if(scanf("%d",&num)==0)
 		{
-			cout<<"\nÊäÈëÓÐÎó:(\n";
+			cout<<"\nè¾“å…¥æœ‰è¯¯:(\n";
 			system("pause");
 			exit(1);
 		 }
@@ -129,10 +129,10 @@ int main()
 			    break;
 			case 3 :
 			{
-			    cout<<"\nÇëÊäÈëÃÜÔ¿£¨·Ç¸ºÕûÊý£©£º";
+			    cout<<"\nè¯·è¾“å…¥å¯†é’¥ï¼ˆéžè´Ÿæ•´æ•°ï¼‰ï¼š";
 	            if(scanf("%u",&key)==0)
 		        {
-                    cout<<"\nÊäÈëÓÐÎó:(\n";
+                    cout<<"\nè¾“å…¥æœ‰è¯¯:(\n";
                     system("pause");
 			        exit(1);
 		        }
@@ -140,12 +140,12 @@ int main()
 			    break;
 			case 4 :
 			{
-				cout<<"\n¸ÐÐ»ÄúµÄÊ¹ÓÃ:),×÷Õß½«¼ÌÐø¸Ä½ø´Ë³ÌÐò£¬´Ó¶ø¸øÄú´øÀ´¸üºÃµÄÌåÑé¡£\n\n";
+				cout<<"\næ„Ÿè°¢æ‚¨çš„ä½¿ç”¨:),ä½œè€…å°†ç»§ç»­æ”¹è¿›æ­¤ç¨‹åºï¼Œä»Žè€Œç»™æ‚¨å¸¦æ¥æ›´å¥½çš„ä½“éªŒã€‚\n\n";
 				system("pause");
 				exit(0);
 			}
 			    break;
-			default : cout<<"\n¾¯¸æ£ºÇë°´ÕÕÖ¸Ê¾ÊäÈëÑ¡Ïî¡£\n";
+			default : cout<<"\nè­¦å‘Šï¼šè¯·æŒ‰ç…§æŒ‡ç¤ºè¾“å…¥é€‰é¡¹ã€‚\n";
 		 }
 	}
 
@@ -157,15 +157,15 @@ void fun1()
 	string Text="";
 	string cryptograph="";
 	string mi="";
-	cout<<"\nÇëÊäÈëÒª¡¾¼ÓÃÜ¡¿µÄÃ÷ÎÄ£º\n";
+	cout<<"\nè¯·è¾“å…¥è¦ã€åŠ å¯†ã€‘çš„æ˜Žæ–‡ï¼š\n";
     cin.ignore();
 	getline(cin,Text);
 	cryptograph=escapeURL(Text);
 	mi=EN(cryptograph,key);
     ofstream outfile;
-    outfile.open("ÃÜÎÄ.txt");
+    outfile.open("å¯†æ–‡.txt");
     outfile << mi << endl;
-    cout<<"\nOKÁË£¡¼ÓÃÜºóµÄÃÜÎÄÒÑÎ»ÓÚ±¾Ä¿Â¼ÏÂÃûÎª¡°ÃÜÎÄ¡±µÄÎÄ¼þÀï¡£\n";
+    cout<<"\nOKäº†ï¼åŠ å¯†åŽçš„å¯†æ–‡å·²ä½äºŽæœ¬ç›®å½•ä¸‹åä¸ºâ€œå¯†æ–‡â€çš„æ–‡ä»¶é‡Œã€‚\n";
     outfile.close();
 }
 
@@ -174,18 +174,18 @@ void fun2()
 	string Text="";
 	string cryptograph="";
 	string ming="";
-	cout<<"\nÇë½«ÐèÒª·­ÒëµÄ¡¾ÃÜÎÄ¡¿ÊäÈëµ½±¾Ä¿Â¼ÏÂÃûÎª¡°ÃÜÎÄ¡±µÄÎÄ¼þÀï¡£\nÈ·ÈÏºó";
+	cout<<"\nè¯·å°†éœ€è¦ç¿»è¯‘çš„ã€å¯†æ–‡ã€‘è¾“å…¥åˆ°æœ¬ç›®å½•ä¸‹åä¸ºâ€œå¯†æ–‡â€çš„æ–‡ä»¶é‡Œã€‚\nç¡®è®¤åŽ";
 	system("pause");
 	ifstream infile;
-    infile.open("ÃÜÎÄ.txt");
+    infile.open("å¯†æ–‡.txt");
     infile >>cryptograph;
     ming=DE(cryptograph,key);
     Text=deescapeURL(ming);
-	cout<<"\n½âÃÜºóµÄÃ÷ÎÄÊÇ£º\n"<<Text<<endl;
+	cout<<"\nè§£å¯†åŽçš„æ˜Žæ–‡æ˜¯ï¼š\n"<<Text<<endl;
     infile.close();
 }
 
-string EN(string en,unsigned int k)                //¶ÔURL¼ÓÃÜ
+string EN(string en,unsigned int k)                //å¯¹URLåŠ å¯†
 {
 	string E;
 	int i,j;
